@@ -109,15 +109,67 @@ namespace ITAStudy
             return sortedIntArray;
         }
 
+        static int BinarySearch(int x, int[] sortedArray)
+        {
+            int n = sortedArray.Length;
+            if (n == 0)
+            {
+                return -1;
+            }
+            else if (n == 1)
+            {
+                if (sortedArray[0] == x)
+                {
+                    return sortedArray[0];
+                }
+                return -1;
+            }
+            else
+            {
+                int middle = (int)Math.Ceiling((double)n / 2);
+
+                if (sortedArray[middle] == x)
+                {
+                    return sortedArray[middle];
+                }
+                else if (sortedArray[middle] > x)
+                {
+                    return BinarySearch(x, SubArray(sortedArray, 0, middle - 1));
+                }
+                else
+                {
+                    return BinarySearch(x, SubArray(sortedArray, middle + 1, sortedArray.Length - 1));
+                }
+            }
+        }
+
+        static int[] SubArray(int[] intArray, int startIndex, int endIndex)
+        {
+            if (startIndex > endIndex || startIndex < 0 || endIndex > intArray.Length - 1)
+            {
+                return new int[0];
+            }
+            int[] subArray = new int[endIndex - startIndex + 1];
+
+            for (int i = startIndex; i <= endIndex; i++ )
+            {
+                subArray[i - startIndex] = intArray[i];
+            }
+
+            return subArray;
+        }
+
 
         static void Main(string[] args)
         {
-            /*int[] intArray = { 9, 7, 3, 1, 2, 4, 5, 0, 8, 6 };
+            int[] intArray = { 9, 7, 3, 1, 2, 4, 5, 0, 8, 6 };
             //InsertionSort(ref intArray);
             MergeSort(ref intArray);
 
-            PrintIntArray(intArray);*/
-            Print(T(11) + " ");
+            Print(BinarySearch(11, intArray) + "");
+
+            PrintIntArray(intArray);
+            //Print(T(11) + " ");
 
         }
     }
