@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITAStudy", "ITAStudy\ITAStudy.csproj", "{5645FA3C-9B0E-43B2-966C-62FA2256DC5A}"
 EndProject
+Project("{5697748A-77EF-44CA-8824-4F5637E5945B}") = "temp_Standard lua 5.1.5", "C:\Users\Yongtao\Documents\BabeLua\Project\temp_Standard lua 5.1.5\temp_Standard lua 5.1.5.luaproj", "{E439935D-B2A2-46AE-856D-2AA408428F33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5645FA3C-9B0E-43B2-966C-62FA2256DC5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5645FA3C-9B0E-43B2-966C-62FA2256DC5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5645FA3C-9B0E-43B2-966C-62FA2256DC5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E439935D-B2A2-46AE-856D-2AA408428F33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E439935D-B2A2-46AE-856D-2AA408428F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E439935D-B2A2-46AE-856D-2AA408428F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E439935D-B2A2-46AE-856D-2AA408428F33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
